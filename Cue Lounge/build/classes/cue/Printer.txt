@@ -1,0 +1,134 @@
+   public class Home extends javax.swing.JFrame{
+  
+
+     
+    
+    
+    
+    
+
+    private void clear()
+    { 
+    tf1_P1Name_GameTable.setText("");
+    tf2_p2Name_GameTable.setText("");
+    tf4_stime_GameTable.setText("");
+    tf5_endTime_GameTable.setText("");
+    tf3_gamequant_GameTable.setText("");
+    }
+   
+        
+        //Clearing textfield after printing
+
+    
+    //Class for bill printing
+
+    public class BillPrintable implements Printable{
+    int size;ObservableList<String> gamenames;ObservableList<String> quantgame; float bill;float paid;
+    public void getValuesFrmGameTable(int size,ObservableList<String> gamenames,ObservableList<String> quantgame,float bill,float paid){
+        this.gamenames=gamenames;
+        this.size=size;
+        this.quantgame=quantgame;
+        this.bill=bill;
+        this.paid=paid;
+    }
+
+    
+    
+   @Override
+  public int print(Graphics graphics, PageFormat pageFormat,int pageIndex) 
+  throws PrinterException 
+  {    
+      float cashback=bill-paid;
+      int r=size;
+      ImageIcon icon=new ImageIcon("H:\\Comsats 5th semester PC\\SDM\\Cue\\Cue Lounge\\src\\cue\\WhatsApp Image 2019-12-04 at 10.16.28 AM.jpeg"); 
+      int result = NO_SUCH_PAGE;    
+        if (pageIndex == 0) {                    
+        
+            Graphics2D g2d = (Graphics2D) graphics;                    
+            double width = pageFormat.getImageableWidth();                               
+            g2d.translate((int) pageFormat.getImageableX(),(int) pageFormat.getImageableY()); 
+
+
+
+          //  FontMetrics metrics=g2d.getFontMetrics(new Font("Arial",Font.BOLD,7));
+        
+        try{
+            int y=20;
+            int yShift = 10;
+            int headerRectHeight=15;
+           // int headerRectHeighta=40;
+            
+                
+            g2d.setFont(new Font("Monospaced",Font.PLAIN,9));
+            g2d.drawImage(icon.getImage(), 50, 20, 90, 30, rootPane);y+=yShift+30;
+            g2d.drawString("-------------------------------------",12,y);y+=yShift;
+            g2d.drawString("         www.cuelounge.com        ",12,y);y+=yShift;
+            g2d.drawString("      Cue Lounge Snooker club  ",12,y);y+=yShift;
+            g2d.drawString("    near COMSATS, Sahiwal campus ",12,y);y+=yShift;
+            g2d.drawString("   www.facebook.com/CueLounge ",12,y);y+=yShift;
+            g2d.drawString("        +92 304 6896696      ",12,y);y+=yShift;
+            g2d.drawString("-------------------------------------",12,y);y+=headerRectHeight;
+
+            g2d.drawString(" Game Name                  Quantity   ",10,y);y+=yShift;
+            g2d.drawString("-------------------------------------",10,y);y+=headerRectHeight;
+     
+            for(int s=0; s<r; s++)
+            {
+            g2d.drawString(" "+gamenames.get(s)+"                            ",10,y);y+=yShift;
+
+            }
+          
+            g2d.drawString("-------------------------------------",10,y);y+=yShift;
+            g2d.drawString(" Total amount:               "+String.valueOf(bill)+"   ",10,y);y+=yShift;
+            g2d.drawString("-------------------------------------",10,y);y+=yShift;
+            g2d.drawString(" Amount paid:                  "+String.valueOf(paid),10,y);y+=yShift;
+            g2d.drawString("-------------------------------------",10,y);y+=yShift;
+            g2d.drawString(" Cash Payback   :                 "+String.valueOf(cashback)+"   ",10,y);y+=yShift;
+  
+            g2d.drawString("*************************************",10,y);y+=yShift;
+            g2d.drawString("       THANK YOU COME AGAIN            ",10,y);y+=yShift;
+            g2d.drawString("*************************************",10,y);y+=yShift;
+            g2d.drawString("       SOFTWARE BY:AATH Developers          ",10,y);y+=yShift;
+            g2d.drawString("   CONTACT: aath123@gmail.com       ",10,y);y+=yShift;       
+           
+
+    }
+    catch(Exception e){
+    e.printStackTrace();
+    }
+
+              result = PAGE_EXISTS;    
+          }    
+          return result;    
+      }
+           
+       // pj.setPrintable(new Printer.BillPrintable(),getPageFormat(pj));
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+ amountpaid=Float.parseFloat(tf6_amountpaid_GameTable1.getText());
+        //Now it's time to do printing
+         bHeight = Double.valueOf(gamenames.length);
+        //JOptionPane.showMessageDialog(rootPane, bHeight);
+        
+        PrinterJob pj = PrinterJob.getPrinterJob();
+
+        pj.setPrintable(new Home().new BillPrintable(),getPageFormat(pj));
+        try {
+             pj.print();
+          
+        }
+         catch (PrinterException ex) {
+                 ex.printStackTrace();
+        } 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    private void clear()
+    { 
+    tf1_P1Name_GameTable.setText("");
+    tf2_p2Name_GameTable.setText("");
+    tf4_stime_GameTable.setText("");
+    tf5_endTime_GameTable.setText("");
+    tf3_gamequant_GameTable.setText("");
+    }

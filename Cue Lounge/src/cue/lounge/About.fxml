@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cue.lounge.AboutController">
+   <children>
+      <MenuBar layoutY="-3.0" opacity="0.74" prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: #505050;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="8.0" layoutY="27.0" text="CUE LOUNGE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="73.0" text="Cue Loungue is a popular snooker club in sahiwal. It is situated near COMSATS University Islamabad, Sahiwal campus. Established since January 22, 2018. " />
+      <Label layoutX="14.0" layoutY="101.0" text="Contact us:" />
+      <Label layoutX="14.0" layoutY="152.0" text="Developers:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="195.0" text="Developed by students of BSCS COMSATS university Islamabad, Sahiwal campus." />
+      <Label layoutX="30.0" layoutY="234.0" text="Talha Abbas Jalvi              0305-6896696" />
+      <Label layoutX="30.0" layoutY="258.0" text="Hassan Haq                      0302-7863123" />
+      <Label layoutX="30.0" layoutY="283.0" text="Aurangzaib                       0344-540114" />
+      <Label layoutX="30.0" layoutY="307.0" text="M Awais                           0302-6167224" />
+      <Button layoutX="30.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #46b20e;" text="Print" />
+      <Line endX="119.0" layoutX="240.0" layoutY="143.0" startX="-117.0" stroke="#14d706" strokeWidth="4.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="641.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../WhatsApp%20Image%202019-12-04%20at%2010.16.28%20AM.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

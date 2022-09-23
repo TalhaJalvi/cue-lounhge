@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cue.lounge.Order_InfoController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tb_Order_list" layoutX="14.0" layoutY="102.0" onKeyTyped="#f_autoup7" prefHeight="442.0" prefWidth="861.0">
+        <columns>
+          <TableColumn fx:id="col_Order_ID_order_list" prefWidth="60.0" text="Order_ID" />
+          <TableColumn fx:id="col_Product_ID_list_Order_list" prefWidth="111.0" text="Product_ID_list" />
+            <TableColumn fx:id="col_P_Name_list_Order_list" prefWidth="89.0" text="P_Name_list" />
+            <TableColumn fx:id="col_Quantity_each_Order_list" prefWidth="103.0" text="Quantity_each" />
+            <TableColumn fx:id="col_Each_unit_cost_Order_list" prefWidth="103.0" text="Each_unit_cost" />
+            <TableColumn fx:id="col_Total_Bill_Order_list" prefWidth="68.0" text="Total_Bill" />
+            <TableColumn fx:id="col_Supplier_ID_Order_list" prefWidth="114.0" text="Supplier_ID" />
+            <TableColumn fx:id="col_Stock_type_Order_list" prefWidth="78.0" text="Stock_type" />
+            <TableColumn fx:id="col_Status_Order_list" prefWidth="70.0" text="status" />
+            <TableColumn fx:id="col_Date_Order_list" prefWidth="70.0" text="Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf1_orderlist" layoutX="663.0" layoutY="53.0" onKeyReleased="#f_tf1_orderlist" promptText="Search" />
+      <Button fx:id="b2_print_orderlist" layoutX="81.0" layoutY="554.0" mnemonicParsing="false" onAction="#f_b2_print_orderlist" prefHeight="25.0" prefWidth="77.0" text="Print" />
+      <Button fx:id="b4_remove_orderlist" layoutX="603.0" layoutY="554.0" mnemonicParsing="false" onAction="#f_b4_remove_orderlist" prefHeight="25.0" prefWidth="77.0" text="Remove" />
+      <Label layoutX="28.0" layoutY="53.0" prefHeight="37.0" prefWidth="130.0" text="Order llist" underline="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="b3_neworder_orderlist" layoutX="180.0" layoutY="554.0" mnemonicParsing="false" onAction="#f_b3_neworder_orderlist" prefHeight="25.0" prefWidth="77.0" text="New order" />
+      <Button fx:id="b5_edit_orderlist" layoutX="699.0" layoutY="554.0" mnemonicParsing="false" onAction="#f_b5_edit_orderlist" prefHeight="25.0" prefWidth="77.0" text="Edit" />
+      <Label fx:id="lb1_orderlist" layoutX="321.0" layoutY="558.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>

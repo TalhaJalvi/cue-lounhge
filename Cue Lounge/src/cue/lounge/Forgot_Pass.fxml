@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anc_fp" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cue.lounge.Forgot_PassController">
+   <children>
+      <Text layoutX="147.0" layoutY="-3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="verification code is sent to zabik1144@gmail.com" wrappingWidth="352.50390625">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="186.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forget your Password?" wrappingWidth="239.17578125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Line endX="319.0" layoutX="281.0" layoutY="74.0" startX="-281.0" stroke="#46b20e" strokeWidth="4.0" />
+      <Text layoutX="124.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code will be sended to owner mail (Mail given at time of software purchase)" wrappingWidth="352.5039130449295" />
+      <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="63.0" layoutY="84.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Lock%20png.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="b_check_fg" buttonType="RAISED" layoutX="306.0" layoutY="268.0" onAction="#f_check_fg" prefHeight="34.0" prefWidth="108.0" text="Check" textFill="#1a1e1c" />
+      <TextField fx:id="tf_fp1" layoutX="227.0" layoutY="219.0" onKeyTyped="#f_fg1" promptText="Enter 4 - Digit security code" />
+      <JFXButton fx:id="b_send_fg" buttonType="RAISED" layoutX="198.0" layoutY="268.0" onAction="#f_send_fg" prefHeight="34.0" prefWidth="108.0" text="Send code" textFill="#1a1e1c" />
+   </children>
+</AnchorPane>

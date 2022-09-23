@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anc_up_emp_tb" onKeyTyped="#f_tf6_up_emp_dp" prefHeight="330.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateFrames.Emp_tb_upController">
+   <children>
+      <Label layoutX="29.0" layoutY="79.0" text="Name" />
+      <Label layoutX="237.0" layoutY="79.0" text="Post" />
+      <Label layoutX="25.0" layoutY="131.0" text="Salary" />
+      <Label layoutX="17.0" layoutY="175.0" text="Maritual Status" />
+      <Label layoutX="73.0" layoutY="214.0" text="Address" />
+      <Label layoutX="440.0" layoutY="131.0" text="Paid" />
+      <Label layoutX="432.0" layoutY="79.0" text="Gender" />
+      <Label layoutX="238.0" layoutY="131.0" text="DOJ" />
+      <Label layoutX="202.0" layoutY="14.0" opacity="0.39" text="Update Employee" underline="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf1_up_emp_tb" layoutX="85.0" layoutY="75.0" onKeyTyped="#f_tf1_up_emp_tb" prefHeight="25.0" prefWidth="121.0" />
+      <TextField fx:id="tf2_up_emp_tb" layoutX="280.0" layoutY="75.0" onKeyTyped="#f_tf2_up_emp_tb" prefHeight="25.0" prefWidth="121.0" />
+      <TextField fx:id="tf3_up_emp_tb" layoutX="85.0" layoutY="127.0" onKeyTyped="#f_tf3_up_emp_tb" prefHeight="25.0" prefWidth="121.0" />
+      <DatePicker fx:id="dp1_up_emp_tb" layoutX="280.0" layoutY="127.0" prefHeight="25.0" prefWidth="121.0" />
+      <RadioButton fx:id="rb1_up_emp_tb" layoutX="122.0" layoutY="175.0" mnemonicParsing="false" text="Single">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rb2_up_emp_tb" layoutX="183.0" layoutY="175.0" mnemonicParsing="false" text="Married" toggleGroup="$gender" />
+      <TextField fx:id="tf4_up_emp_tb" layoutX="136.0" layoutY="210.0" onKeyTyped="#tf4_up_emp_tb" prefHeight="25.0" prefWidth="444.0" />
+      <Button fx:id="b1_up_emp_tb" layoutX="433.0" layoutY="295.0" mnemonicParsing="false" onAction="#f_b1_up_emp_tb" prefHeight="25.0" prefWidth="50.0" text="save" />
+      <Button fx:id="b2_up_emp_tb" layoutX="500.0" layoutY="295.0" mnemonicParsing="false" onAction="#f_b2_up_emp_tb" text="cancel" />
+      <Line endX="131.5" layoutX="41.0" layoutY="32.0" startX="-30.5" />
+      <Line endX="-51.0" endY="-25.5" layoutX="61.0" layoutY="58.0" startX="-51.0" startY="249.0" />
+      <Line endX="312.0" endY="46.5" layoutX="110.0" layoutY="261.0" startX="-99.5" startY="46.5" />
+      <Line endX="78.0" layoutX="545.0" layoutY="32.0" startX="-114.0" />
+      <Line endX="63.5" endY="-82.0" layoutX="560.0" layoutY="114.0" startX="63.5" startY="190.0" />
+      <Line endX="39.0" endY="247.0" layoutX="528.0" layoutY="60.0" startX="97.0" startY="247.0" />
+      <ComboBox fx:id="combb_up_emp_tb" layoutX="494.0" layoutY="75.0" prefHeight="25.0" prefWidth="102.0" />
+      <Label layoutX="306.0" layoutY="175.0" text="Phone no:" />
+      <TextField fx:id="tf6_up_emp_tb" layoutX="389.0" layoutY="171.0" prefHeight="25.0" prefWidth="138.0" />
+      <RadioButton fx:id="rb3_up_emp_tb" layoutX="477.0" layoutY="131.0" mnemonicParsing="false" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="paid" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rb4_up_emp_tb" layoutX="525.0" layoutY="131.0" mnemonicParsing="false" text="No" toggleGroup="$paid" />
+      <ComboBox fx:id="combb2_up_emp_tb1" layoutX="537.0" layoutY="171.0" prefHeight="25.0" prefWidth="63.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cue.lounge.Employee_Reg">
+   <children>
+      <AnchorPane fx:id="anc_rmpReg" layoutX="-7.0" prefHeight="648.0" prefWidth="827.0">
+         <children>
+            <Label layoutX="347.0" layoutY="42.0" text="Employee registration" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="125.0" text="First name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="452.0" layoutY="127.0" text="Last name" />
+            <TextField fx:id="tf1_er" layoutX="213.0" layoutY="123.0" onKeyTyped="#f_tf1_er" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="tf2_er" layoutX="546.0" layoutY="123.0" onKeyTyped="#f_tf2_er" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="122.0" layoutY="197.0" text="CNIC" />
+            <Label layoutX="453.0" layoutY="197.0" text="D-O-B" />
+            <TextField fx:id="tf3_er" layoutX="213.0" layoutY="193.0" onKeyTyped="#f_tf3_er" prefHeight="25.0" prefWidth="150.0" />
+            <DatePicker fx:id="dp1_er" layoutX="546.0" layoutY="193.0" />
+            <Label layoutX="122.0" layoutY="263.0" text="Email" />
+            <TextField fx:id="tf4_er" layoutX="213.0" layoutY="259.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="451.0" layoutY="263.0" text="Phone number" />
+            <TextField fx:id="tf5_er" layoutX="546.0" layoutY="259.0" onKeyTyped="#f_tf5_er" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="122.0" layoutY="342.0" text="Gender" />
+            <Label layoutX="458.0" layoutY="334.0" text="City" />
+            <TextField fx:id="tf6_er" layoutX="546.0" layoutY="330.0" onKeyTyped="#f_tf6_er" prefHeight="25.0" prefWidth="174.0" />
+            <Button fx:id="b3_er" layoutX="606.0" layoutY="553.0" mnemonicParsing="false" onAction="#f_save_er" prefHeight="25.0" prefWidth="54.0" text="Save" />
+            <Button fx:id="b4_er" layoutX="676.0" layoutY="553.0" mnemonicParsing="false" onAction="#f_cancel_er" prefHeight="25.0" prefWidth="54.0" text="Cancel" />
+            <Label layoutX="120.0" layoutY="392.0" text="Address" />
+            <TextArea fx:id="ta1_er" layoutX="213.0" layoutY="392.0" prefHeight="60.0" prefWidth="200.0" />
+            <Label layoutX="451.0" layoutY="392.0" text="Qualification" />
+            <TextField fx:id="tf7_er" layoutX="546.0" layoutY="388.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="112.0" layoutY="468.0" text="Maritual status" />
+            <RadioButton fx:id="rb4_er" layoutX="213.0" layoutY="468.0" mnemonicParsing="false" text="single">
+               <toggleGroup>
+                  <ToggleGroup fx:id="marriage" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rb5_er" layoutX="287.0" layoutY="468.0" mnemonicParsing="false" text="Married" toggleGroup="$marriage" />
+            <Label layoutX="457.0" layoutY="444.0" text="Post" />
+            <TextField fx:id="tf8_er" layoutX="546.0" layoutY="440.0" onKeyTyped="#f_tf8_er" prefHeight="25.0" prefWidth="174.0" />
+            <Line endX="100.0" layoutX="213.0" layoutY="57.0" startX="-164.0" />
+            <Line endX="-102.5" endY="488.0" layoutX="151.0" layoutY="91.0" startX="-102.5" startY="-33.5" />
+            <Line endX="438.0" layoutX="149.0" layoutY="578.0" startX="-100.0" />
+            <Line endX="94.0" layoutX="676.0" layoutY="58.0" startX="-100.0" />
+            <Line endX="-61.0" layoutX="831.0" layoutY="577.0" startX="-90.0" />
+            <Label layoutX="453.0" layoutY="494.0" text="Salary" />
+            <TextField fx:id="tf10_er" layoutX="546.0" layoutY="490.0" onKeyTyped="#f_tf10_er" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="114.0" layoutY="507.0" text="RESUME" />
+            <Label layoutX="108.0" layoutY="545.0" text="Curriculum Vitae" />
+            <TextField fx:id="tf9_er" layoutX="213.0" layoutY="503.0" />
+            <TextField fx:id="tf11_er" layoutX="213.0" layoutY="541.0" />
+            <Button fx:id="b1_er" layoutX="379.0" layoutY="503.0" mnemonicParsing="false" onAction="#f_up1resume_er" text="Upload" />
+            <Button fx:id="b2_er" layoutX="379.0" layoutY="541.0" mnemonicParsing="false" onAction="#f_up2CV_er" text="Upload" />
+            <RadioButton fx:id="rb1_er" layoutX="201.0" layoutY="343.0" mnemonicParsing="false" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb2_er" layoutX="266.0" layoutY="342.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender" />
+            <RadioButton fx:id="rb3_er" layoutX="336.0" layoutY="342.0" mnemonicParsing="false" text="other" toggleGroup="$Gender" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="848.0" layoutY="124.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="img1_er" fitHeight="200.0" fitWidth="200.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img_568657.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lbup_er" layoutX="834.0" layoutY="346.0" text="Upload your photo" />
+      <Button fx:id="b5_er" layoutX="964.0" layoutY="342.0" mnemonicParsing="false" onAction="#f_up3pic_er" text="Upload" />
+      <Line endX="-70.5" endY="499.0" layoutX="834.0" layoutY="78.0" startX="-71.0" startY="-19.499984741210938" />
+   </children>
+</AnchorPane>

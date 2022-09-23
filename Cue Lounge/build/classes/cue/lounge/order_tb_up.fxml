@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anc_order_up_list" opacity="0.79" prefHeight="400.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cue.lounge.Order_tb_upController">
+   <children>
+      <Label layoutX="106.0" layoutY="23.0" text="Update Order_List">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="94.0" text="Product_ID_list" />
+      <Label layoutX="280.0" layoutY="94.0" text="Product_Name_list" />
+      <Label layoutX="505.0" layoutY="94.0" text="Quantity_each" />
+      <Label layoutX="63.0" layoutY="139.0" text="Each unit cost" />
+      <Label layoutX="307.0" layoutY="139.0" text="Total Bill" />
+      <Label layoutX="505.0" layoutY="139.0" text="Supplier ID" />
+      <Label layoutX="135.0" layoutY="192.0" text="Stock type" />
+      <Label layoutX="386.0" layoutY="192.0" text="Order Status" />
+      <Label layoutX="290.0" layoutY="259.0" text="Date" />
+      <Button fx:id="b1_up_order_list" layoutX="436.0" layoutY="341.0" mnemonicParsing="false" onAction="#f_b1_up_order_list" prefHeight="26.0" prefWidth="74.0" text="Save" />
+      <Button fx:id="b2_up_order_list" layoutX="535.0" layoutY="341.0" mnemonicParsing="false" onAction="#f_b2_up_order_list" prefHeight="26.0" prefWidth="74.0" text="Cancel" />
+      <TextField fx:id="tf2_up_order_list" layoutX="156.0" layoutY="90.0" prefHeight="25.0" prefWidth="112.0" />
+      <TextField fx:id="tf3_up_order_list" layoutX="386.0" layoutY="90.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="tf4_up_order_list" layoutX="609.0" layoutY="90.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="tf5_up_order_list" layoutX="156.0" layoutY="135.0" prefHeight="25.0" prefWidth="112.0" />
+      <TextField fx:id="tf6_up_order_list" layoutX="387.0" layoutY="135.0" onKeyTyped="#f_tf6_up_order_list" prefHeight="25.0" prefWidth="99.0" />
+      <ComboBox fx:id="combx1_tup_order_list" layoutX="215.0" layoutY="188.0" prefWidth="150.0" />
+      <ComboBox fx:id="combx2_tup_order_list" layoutX="489.0" layoutY="188.0" prefWidth="150.0" />
+      <DatePicker fx:id="dp1_tup_order_list" layoutX="350.0" layoutY="255.0" />
+      <JFXTextField fx:id="tf1_up_order_list" labelFloat="true" layoutX="365.0" layoutY="30.0" onKeyTyped="#f_tf1_up_order_list" promptText="Order ID" />
+      <Line endX="34.5" endY="10.0" layoutX="55.0" layoutY="29.0" startX="-30.707107543945312" startY="10.0" />
+      <Line endX="-76.20709228515625" endY="152.0" layoutX="100.0" layoutY="209.0" startX="-76.20709228515625" startY="-169.5" />
+      <Line endX="296.0" endY="10.5" layoutX="124.0" layoutY="351.0" startX="-99.70709228515625" startY="10.5" />
+      <Line endX="100.0" layoutX="639.0" layoutY="42.0" startX="-81.0" />
+      <Line endX="130.5" endY="-217.5" layoutX="609.0" layoutY="259.0" startX="130.5" startY="96.0" />
+      <Line endX="158.0" endY="1.5" layoutX="581.0" layoutY="354.0" startX="42.0" startY="1.5" />
+      <ComboBox fx:id="combx3_tup_order_list1" layoutX="609.0" layoutY="127.0" prefHeight="25.0" prefWidth="99.0" />
+   </children>
+</AnchorPane>
